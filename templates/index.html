@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="flex w-screen">
+  <div class="m-auto">
+    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">The Hacker's Guide to the Polkadot Galaxy</h1>
+    <p class="my-4 text-lg text-gray-500">
+      Follow along these lesson sections either in order, starting with Polkadot in a Nutshell, or choose your own adventure. The choice is up to you!
+    </p>
+  </div>
+</div>
+
+{% set curriculum_section = get_section(path="curriculum/_index.md") %}
+<div class="flex items-stretch shadow-md p-10 grid overflow-hidden grid-cols-4 grid-rows-4 gap-2">
+  {% for page in curriculum_section.pages %}
+  <div class="h-full m-auto max-w-sm rounded overflow-hidden shadow-lg">
+    <a href="{{ page.permalink | safe }}">
+      <img class="w-full" src="{{ page.extra.img }}" alt="{{ page.extra.alt_img }}">
+    </a>
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">
+        <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+      </div>
+      <p class="text-gray-700 text-base">
+        {{ page.description }}
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}
