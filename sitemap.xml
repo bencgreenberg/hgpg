@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://bencgreenberg.github.io/hgpg/</loc>
+    </url>
+    <url>
+        <loc>https://bencgreenberg.github.io/hgpg/curriculum/</loc>
+    </url>
+    <url>
+        <loc>https://bencgreenberg.github.io/hgpg/curriculum/build-dapp/</loc>
+    </url>
+    <url>
+        <loc>https://bencgreenberg.github.io/hgpg/curriculum/build-interfaces-experiences-with-polkadot/</loc>
+    </url>
+    <url>
+        <loc>https://bencgreenberg.github.io/hgpg/curriculum/build-parachain-with-substrate/</loc>
+    </url>
+    <url>
+        <loc>https://bencgreenberg.github.io/hgpg/curriculum/community-and-support/</loc>
+    </url>
+    <url>
+        <loc>https://bencgreenberg.github.io/hgpg/curriculum/deep-dive/</loc>
+    </url>
+    <url>
+        <loc>https://bencgreenberg.github.io/hgpg/curriculum/in-a-nutshull/</loc>
+        <lastmod>2022-11-22</lastmod>
+    </url>
+    <url>
+        <loc>https://bencgreenberg.github.io/hgpg/curriculum/start-building/</loc>
+    </url>
+</urlset>
