@@ -1,16 +1,27 @@
 {% extends "base.html" %}
+{% block header %}
+<section class="bg-gray-800 text-gray-100">
+	<div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+		<div class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+			<img src="header_image.png" alt="Polkadot Ecosystem" class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+		</div>
+		<div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+			<h1 class="text-5xl font-bold leading-none sm:text-6xl">The Hacker's Guide to the
+				<span class="text-pink-500">Polkadot Galaxy</span>
+			</h1>
+			<p class="mt-6 mb-8 text-lg sm:mb-12">A guide to the Polkadot ecosystem for developers and hackers. Get started building something amazing for Polkadot today.
+			</p>
+			<div class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+				<a rel="noopener noreferrer" href="#curriculum-section" class="px-8 py-3 text-lg font-semibold rounded bg-pink-500 text-gray-900">Begin your journey</a>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock header %}
 {% block content %}
-<div class="flex w-screen">
-  <div class="m-auto">
-    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">The Hacker's Guide to the Polkadot Galaxy</h1>
-    <p class="my-4 text-lg text-gray-500">
-      Follow along these lesson sections either in order, starting with Polkadot in a Nutshell, or choose your own adventure. The choice is up to you!
-    </p>
-  </div>
-</div>
 
 {% set curriculum_section = get_section(path="curriculum/_index.md") %}
-<div class="flex items-stretch shadow-md p-10 grid overflow-hidden grid-cols-4 grid-rows-4 gap-2">
+<div id="curriculum-section" class="flex w-screen items-stretch shadow-md p-10 grid overflow-hidden grid-cols-4 grid-rows-4 gap-2">
   {% for page in curriculum_section.pages %}
   <div class="h-full m-auto max-w-sm rounded overflow-hidden shadow-lg">
     <a href="{{ page.permalink | safe }}">
